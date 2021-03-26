@@ -11,15 +11,23 @@ def main():
     with open(r'config\config.yaml') as f:
         cfg = yaml.load(f, Loader=yaml.FullLoader)
 
+    # create web driver for Heroku app
+    chrome_optinos = webdriver.ChromeOptions()
+    chrom_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
+    driver =  webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    
     # variables
     email = cfg['email']
     password = cfg['password']
     location = cfg['location']
     time_slot = get_time_slot(cfg)
     # booking_date = get_booking_date(9)
-    booking_date = 'March 25, 2021'
+    booking_date = 'April 01, 2021'
     path = cfg['chrome_driver_path']
-    driver = webdriver.Chrome(path)
+    # driver = webdriver.Chrome(path)
 
     driver.get('https://ymcaywca.legendonlineservices.ca/enterprise/account/login')
     time.sleep(3)
@@ -67,7 +75,7 @@ def main():
     time.sleep(1)
 
     # add to cart
-    add_to_basket = driver.find_elements_by_xpath('//*[@id="timeTableDetails"]/div/div/div[4]/button[3]')[0]
+    add_to_basket = driver.find_elements_by_xpath('/html/body/div[1]/div[2]/div/div/bookings-timetable/timetable-item-details/div/div/div/div[4]/button[3]')[0]
     add_to_basket.click()
     time.sleep(5)
 
