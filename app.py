@@ -26,8 +26,8 @@ def main():
     location = cfg['location']
     time_slot = get_time_slot(cfg)
     # booking_date = get_booking_date(9)
-    booking_date = 'April 01, 2021'
-    path = cfg['chrome_driver_path']
+    booking_date = 'April 02, 2021'
+    # path = cfg['chrome_driver_path']
     # driver = webdriver.Chrome(path)
 
     driver.get('https://ymcaywca.legendonlineservices.ca/enterprise/account/login')
