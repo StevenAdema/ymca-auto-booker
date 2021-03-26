@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import time
 import yaml
+import os
 import datetime as dt
 
 
@@ -12,8 +13,8 @@ def main():
         cfg = yaml.load(f, Loader=yaml.FullLoader)
 
     # create web driver for Heroku app
-    chrome_optinos = webdriver.ChromeOptions()
-    chrom_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
