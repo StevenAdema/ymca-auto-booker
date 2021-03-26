@@ -59,6 +59,7 @@ def main():
     print('Navigate to:', location, 'booking calendar')
 
     # select workout date and slot
+    print('Select session:', booking_date, cfg['preferred_time_slot'])
     booking = driver.find_element_by_id('unique-identifier-2')
     time.sleep(0.5)
     booking.send_keys(Keys.CONTROL + 'a')
@@ -68,11 +69,11 @@ def main():
     booking.send_keys(booking_date)
     time.sleep(0.5)
     booking.send_keys(Keys.RETURN)
-    time.sleep(1)
+    time.sleep(1.5)
     select_workout = driver.find_elements_by_xpath(time_slot)[0]
     select_workout.click()
     time.sleep(1)
-    print('Select session:', booking_date, cfg['preferred_time_slot'], )
+    print('Confirm selection')
 
     # add to cart
     add_to_basket = driver.find_elements_by_xpath('/html/body/div[1]/div[2]/div/div/bookings-timetable/timetable-item-details/div/div/div/div[4]/button[3]')[0]
