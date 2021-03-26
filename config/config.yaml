@@ -1,4 +1,5 @@
 # Environment variables
+run_local: False
 email: 'stevenadema@gmail.com'
 password: 'Another.1'
 location: 'Taggart Family Y'
