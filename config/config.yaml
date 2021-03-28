@@ -1,7 +1,7 @@
 # Environment variables
 run_local: False
-email: 'stevenadema@gmail.com'
-password: 'Another1y'
+email: 'youremail@gmail.com'
+password: 'yourpassword'
 location: 'Taggart Family Y'
 preferred_time_slot: '10:00 AM' # must match value from timeslots_dict below
 second_choice_slot: '6:00 PM'
