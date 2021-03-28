@@ -1,5 +1,5 @@
 # Environment variables
-run_local: True
+run_local: False
 email: 'stevenadema@gmail.com'
 password: 'Another1y'
 location: 'Taggart Family Y'

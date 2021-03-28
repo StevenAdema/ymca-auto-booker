@@ -12,11 +12,13 @@ booked within minutes of becoming available. This bot automatically logs in navi
 booking in less than 30 seconds.
 
 ## Installation
-1. Clone the repo.
+1. ``` git clone https://github.com/StevenAdema/ymca-auto-booker.git ```
 2. ``` pip install -r requirements.txt ```
-3. Deploy via Heroku
-4. Use Heroku Scheduler to run app.py daily at 9:00 AM EST
-
+3. ``` heroku create ```
+4. ``` git push heroku main ```
+5. ``` heroku addons: create scheduler:standard ```
+6. ``` heroku addons:open scheudler ```
+7. On Scheduler Dashboard add a new job and set to 03:00 (07:00 EST)
 
 <br>
 <br>
