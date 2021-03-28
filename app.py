@@ -41,7 +41,7 @@ def main():
 
     # open booking page and select location, workout
     driver.get('https://ymcaywca.legendonlineservices.ca/enterprise/bookingscentre/index')
-    time.sleep(3.5)
+    time.sleep(3)
     select = driver.find_element_by_class_name('select2-search__field')
     select.send_keys(location)
     time.sleep(0.5)
