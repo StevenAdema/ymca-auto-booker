@@ -14,7 +14,8 @@ before the time slot is filled.
 ## How it Works
 
 Using Selenium WebDriver, the Python code will navigate through the YMCA site and book a workout session according to the
-parameters set in the config file: location and preferred time slot(s).
+parameters set in the config file: location and preferred time slot(s). The app is hosted by Heroku and uses the scheduler 
+to run the app daily at 7:00 AM EST to make bookings for 7 days in advance.
 
 ## Installation
 1. ``` git clone https://github.com/StevenAdema/ymca-auto-booker.git ```
