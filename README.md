@@ -23,7 +23,7 @@ to run the app daily at 7:00 AM EST to make bookings for 7 days in advance.
 3. ``` heroku create ```
 4. ``` git push heroku main ```
 5. ``` heroku addons: create scheduler:standard ```
-6. ``` heroku addons:open scheudler ```
+6. ``` heroku addons:open scheduler ```
 7. In the Heroku Scheduler Dashboard add a new job and set to 03:00 (07:00 EST)
 
 <br>
