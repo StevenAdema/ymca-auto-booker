@@ -28,15 +28,6 @@ to run the app daily at 7:00 AM EST to make bookings for 7 days in advance.
 
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ## Demo
 
